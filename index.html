@@ -62,18 +62,20 @@
 	</footer>
 </body>
 <script>
-	window.addEventListener('scroll', function(){
-		let value = window.scrollY,
-			 futureTop = $('.future').offset().top;
-		if(value > futureTop - 250){
-			$('.op1').addClass('animate__fadeInUp');
-		}
-		if(value > futureTop - 175){
-			$('.op2').addClass('animate__fadeInUp');
-		}
-		if(value > futureTop - 100){
-			$('.op3').addClass('animate__fadeInUp');
-		}
-	})
+	window.onload = function(){
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY,
+				 futureTop = $('.future').offset().top;
+			if(value > futureTop - 250){
+				$('.op1').addClass('animate__fadeInUp');
+			}
+			if(value > futureTop - 175){
+				$('.op2').addClass('animate__fadeInUp');
+			}
+			if(value > futureTop - 100){
+				$('.op3').addClass('animate__fadeInUp');
+			}
+		})
+	}
 </script>
 </html>
